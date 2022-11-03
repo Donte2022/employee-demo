@@ -1,0 +1,12 @@
+POST http://localhost:5650/api/account
+Content-Type: application/json
+
+//In case you forgot what properties to pass you can check your DTO
+//"interface" to view them
+
+{
+  "username": "don",
+  "password": "pass"
+}
+
+###

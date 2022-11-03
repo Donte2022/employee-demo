@@ -1,11 +1,27 @@
+#describe the containers
 services:
   database:
+#    tells the containers what software they are running
     image: "postgres:latest"
+#    location of the phsycial space
+#  inside the computer to utilize for the database
+#    the ports allow the container to communicate with the outside world
+#    map the virtual port to a physical port on the computer
+#    which allow you to send a request to the physical port
+#    that will be routed to the virtual one
+#    left is local/physical right is the virtual port
     ports:
       - 5432:5432
+#      these settings allow POSTGRES to configure itself
+#    username and password allow us to tell Postgres that we
+#    are allowed access to the information within the DB
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
+#      sets the default database name that is configured
+#      inside of postgres
       POSTGRES_DB: postgres
+#      location to where the container will store its data
+#      inside the computer
     volumes:
       - ./database:/var/lib/postgresql/data
