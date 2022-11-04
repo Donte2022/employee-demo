@@ -1,6 +1,8 @@
 package net.yorksolutions.dontaviousgreencontactprjbe.Entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,6 +15,9 @@ public class Account {
     //username must be included and it must be unique (only one exist)
     @Column(nullable = false, unique = true)
     private String username;
+
+    //json ignore to prevent the password from being sent Back to the client
+    @JsonIgnore
     private String password;
 
     //create a generic constructor to clear error

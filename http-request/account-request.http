@@ -10,3 +10,6 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:5650/api/account
+
+###
