@@ -26,8 +26,8 @@ public class Account {
     public Account() {
     }
 
-    public Account(String userName, String password) {
-        this.username = userName;
+    public Account(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
@@ -42,8 +42,8 @@ public class Account {
         return username;
     }
 
-    public void setUserName(String userName) {
-        this.username = userName;
+    public void setUserName(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
