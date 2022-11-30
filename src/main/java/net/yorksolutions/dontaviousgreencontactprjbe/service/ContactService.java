@@ -36,6 +36,7 @@ public class ContactService {
         //by standard it is type long but it will ask for a type Account
         //take the idea and findbyusername in the repo and search to see if it exist
         //remember that findby always returns an Option. Define the type also
+
         Optional<Account> accountOpt = this.accountRepository.findById(requestDTO.owner);
 
         //validate that you found the correct account
